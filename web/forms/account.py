@@ -26,7 +26,9 @@ class LoginForm(BaseForm, django_forms.Form):
                         'max_length': "密码长度不能大于32个字符"}
     )
     rmb = django_fields.IntegerField(required=False)
-
+    email = django_fields.EmailField(
+        error_messages={'required': '邮箱不能为空.'}
+    )
     check_code = django_fields.CharField(
         error_messages={'required': '验证码不能为空.'}
     )
