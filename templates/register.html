@@ -28,8 +28,8 @@
                     <p>{{ obj.errors.password  }}</p>
             </div>
             <div class="form-group">
-                    <label for="password">确认密码</label>
-                    <input type="text" class="form-control" name="password" placeholder="确认密码" />
+                    <label for="password2">确认密码</label>
+                    <input type="text" class="form-control" name="password2" placeholder="确认密码" />
                     <p>{{ obj.errors.password  }}</p>
             </div>
 
@@ -46,12 +46,17 @@
                         <p>{{ obj.errors.check_code  }}</p>
                     </div>
                     <div class="col-xs-5">
-                            <img src="/check_code.html">
+                            <img src="/check_code.html" onclick="changeCheckCode(this);">
                     </div>
                 </div>
             </div>
             <input type="submit" value="下一步">
     </form>
     </div>
+<script>
+        function changeCheckCode(ths){
+            ths.src = ths.src +  '?';
+        }
+    </script>
 </body>
 </html>

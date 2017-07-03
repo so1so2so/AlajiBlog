@@ -18,7 +18,7 @@ class LoginForm(BaseForm, django_forms.Form):
     )
     password = django_fields.RegexField(
         '^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$\%\^\&\*\(\)])[0-9a-zA-Z!@#$\%\^\&\*\(\)]{8,32}$',
-        min_length=12,
+        min_length=8,
         max_length=32,
         error_messages={'required': '密码不能为空.',
                         'invalid': '密码必须包含数字，字母、特殊字符',
@@ -27,7 +27,7 @@ class LoginForm(BaseForm, django_forms.Form):
     )
     rmb = django_fields.IntegerField(required=False)
     email = django_fields.EmailField(
-        error_messages={'required': '邮箱不能为空.'}
+        error_messages={'required': 'email不能为空.'}
     )
     check_code = django_fields.CharField(
         error_messages={'required': '验证码不能为空.'}

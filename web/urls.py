@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^jsonp.html$', account.jsonp),
     url(r'^login.html$', account.login),
     url(r'^logout.html$', account.logout),
-    url(r'^register.html$', account.register),
+    url(r'^register2.html$', account.register),
     url(r'^check_code.html$', account.check_code),
     url(r'^all/(?P<article_type_id>\d+).html$', home.index, name='index'),
     url(r'^(?P<site>\w+).html$', home.home),
